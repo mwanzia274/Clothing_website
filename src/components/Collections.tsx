@@ -72,7 +72,11 @@ const Collections = () => {
                 <p className="text-sm text-warm-gray mb-4">
                   {collection.itemCount}
                 </p>
-                <Button variant="ghost" className="w-full hover:bg-secondary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <Button 
+                  variant="ghost" 
+                  className="w-full hover:bg-secondary group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                  onClick={() => window.alert(`Browse ${collection.title} collection - Coming soon!`)}
+                >
                   View Collection
                 </Button>
               </div>

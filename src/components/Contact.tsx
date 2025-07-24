@@ -82,7 +82,11 @@ const Contact = () => {
                 Book a private consultation with our expert stylists for a 
                 personalized shopping experience.
               </p>
-              <Button variant="elegant" className="w-full">
+              <Button 
+                variant="elegant" 
+                className="w-full"
+                onClick={() => window.open('https://wa.me/254115580891?text=Hi%2C%20I%20would%20like%20to%20book%20a%20personal%20styling%20appointment', '_blank')}
+              >
                 Book Appointment
               </Button>
             </Card>
@@ -134,7 +138,11 @@ const Contact = () => {
                 />
               </div>
 
-              <Button variant="boutique" className="w-full">
+              <Button 
+                variant="boutique" 
+                className="w-full"
+                onClick={() => window.open('mailto:alexmwanzia234@gmail.com?subject=Inquiry from Bella Boutique&body=Hello, I would like to inquire about...', '_blank')}
+              >
                 Send Message
               </Button>
             </form>

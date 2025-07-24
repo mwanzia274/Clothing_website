@@ -3,8 +3,30 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = () => {
+    const emailBody = `
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+    `;
+    
+    window.open(`mailto:alexmwanzia234@gmail.com?subject=${encodeURIComponent(formData.subject || 'Inquiry from Bella Boutique')}&body=${encodeURIComponent(emailBody)}`, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-pearl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

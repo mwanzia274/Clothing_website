@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import LocationMap from "./LocationMap";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -170,6 +171,14 @@ ${formData.message}
               </Button>
             </form>
           </Card>
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">
+            Find Us
+          </h3>
+          <LocationMap />
         </div>
       </div>
     </section>

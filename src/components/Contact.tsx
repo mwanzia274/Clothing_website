@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -107,9 +107,10 @@ ${formData.message}
               <Button 
                 variant="elegant" 
                 className="w-full"
-                onClick={() => window.open('https://wa.me/254115580891?text=Hi%2C%20I%20would%20like%20to%20book%20a%20personal%20styling%20appointment', '_blank')}
+                onClick={() => window.open('https://wa.me/254115580891?text=Hi%2C%20I%20would%20like%20to%20contact%20you', '_blank')}
               >
-                Book Appointment
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Contact Us
               </Button>
             </Card>
           </div>

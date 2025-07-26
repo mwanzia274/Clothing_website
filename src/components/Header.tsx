@@ -34,10 +34,10 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" onClick={() => alert('Search functionality coming soon!')}>
               <Search className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" onClick={() => alert('Shopping cart coming soon!')}>
               <ShoppingBag className="h-5 w-5" />
             </Button>
           </div>
@@ -87,10 +87,10 @@ const Header = () => {
                 Contact
               </a>
               <div className="flex items-center space-x-4 px-3 py-2">
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" onClick={() => alert('Search functionality coming soon!')}>
                   <Search className="h-5 w-5" />
                 </Button>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" onClick={() => alert('Shopping cart coming soon!')}>
                   <ShoppingBag className="h-5 w-5" />
                 </Button>
               </div>

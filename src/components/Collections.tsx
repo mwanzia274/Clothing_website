@@ -1,11 +1,17 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ShoppingCart, Eye } from "lucide-react";
+import { useCart } from "@/hooks/useCart";
+import { useToast } from "@/hooks/use-toast";
 import dressImage from "@/assets/dress-1.jpg";
 import topImage from "@/assets/top-1.jpg";
 import bottomImage from "@/assets/bottom-1.jpg";
 import accessoriesImage from "@/assets/accessories-1.jpg";
 
 const Collections = () => {
+  const { addItem } = useCart();
+  const { toast } = useToast();
+
   const collections = [
     {
       id: 1,
@@ -13,6 +19,7 @@ const Collections = () => {
       description: "Elegant dresses for every occasion",
       image: dressImage,
       itemCount: "24 items",
+      price: 125.00,
     },
     {
       id: 2,
@@ -20,6 +27,7 @@ const Collections = () => {
       description: "Sophisticated tops and blouses",
       image: topImage,
       itemCount: "32 items",
+      price: 75.00,
     },
     {
       id: 3,
@@ -27,6 +35,7 @@ const Collections = () => {
       description: "Tailored pants and skirts",
       image: bottomImage,
       itemCount: "18 items",
+      price: 95.00,
     },
     {
       id: 4,
@@ -34,8 +43,23 @@ const Collections = () => {
       description: "Curated accessories and bags",
       image: accessoriesImage,
       itemCount: "45 items",
+      price: 45.00,
     },
   ];
+
+  const handleAddToCart = (collection: typeof collections[0]) => {
+    addItem({
+      id: collection.id.toString(),
+      title: collection.title,
+      image: collection.image,
+      price: collection.price,
+    });
+    
+    toast({
+      title: "Added to cart!",
+      description: `${collection.title} has been added to your cart.`,
+    });
+  };
 
   return (
     <section id="collections" className="py-20 bg-pearl">
@@ -69,16 +93,32 @@ const Collections = () => {
                 <p className="text-muted-foreground mb-2">
                   {collection.description}
                 </p>
-                <p className="text-sm text-warm-gray mb-4">
-                  {collection.itemCount}
-                </p>
-                <Button 
-                  variant="ghost" 
-                  className="w-full hover:bg-secondary group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                  onClick={() => window.alert(`Browse ${collection.title} collection - Coming soon!`)}
-                >
-                  View Collection
-                </Button>
+                <div className="flex items-center justify-between mb-4">
+                  <p className="text-sm text-warm-gray">
+                    {collection.itemCount}
+                  </p>
+                  <p className="text-lg font-bold text-primary">
+                    ${collection.price}
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <Button 
+                    variant="ghost" 
+                    className="w-full hover:bg-secondary group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                    onClick={() => window.alert(`Browse ${collection.title} collection - Coming soon!`)}
+                  >
+                    <Eye className="w-4 h-4 mr-2" />
+                    View Collection
+                  </Button>
+                  <Button 
+                    variant="elegant" 
+                    className="w-full"
+                    onClick={() => handleAddToCart(collection)}
+                  >
+                    <ShoppingCart className="w-4 h-4 mr-2" />
+                    Add to Cart
+                  </Button>
+                </div>
               </div>
             </Card>
           ))}

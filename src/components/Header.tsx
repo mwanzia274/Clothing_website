@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ShoppingBag, Search, Menu, X } from "lucide-react";
+import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
 import SearchModal from "./SearchModal";
-import CartSidebar from "./CartSidebar";
-import { useCart } from "@/hooks/useCart";
 import dressImage from "@/assets/dress-1.jpg";
 import topImage from "@/assets/top-1.jpg";
 import bottomImage from "@/assets/bottom-1.jpg";
@@ -13,7 +10,6 @@ import accessoriesImage from "@/assets/accessories-1.jpg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const { getTotalItems, setIsOpen: setCartOpen } = useCart();
 
   const collections = [
     {
@@ -78,19 +74,6 @@ const Header = () => {
             <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)}>
               <Search className="h-5 w-5" />
             </Button>
-            <CartSidebar>
-              <Button variant="ghost" size="icon" className="relative" onClick={() => setCartOpen(true)}>
-                <ShoppingBag className="h-5 w-5" />
-                {getTotalItems() > 0 && (
-                  <Badge 
-                    variant="destructive" 
-                    className="absolute -top-2 -right-2 w-5 h-5 rounded-full p-0 flex items-center justify-center text-xs"
-                  >
-                    {getTotalItems()}
-                  </Badge>
-                )}
-              </Button>
-            </CartSidebar>
           </div>
 
           {/* Mobile menu button */}
@@ -141,19 +124,6 @@ const Header = () => {
                 <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)}>
                   <Search className="h-5 w-5" />
                 </Button>
-                <CartSidebar>
-                  <Button variant="ghost" size="icon" className="relative" onClick={() => setCartOpen(true)}>
-                    <ShoppingBag className="h-5 w-5" />
-                    {getTotalItems() > 0 && (
-                      <Badge 
-                        variant="destructive" 
-                        className="absolute -top-2 -right-2 w-5 h-5 rounded-full p-0 flex items-center justify-center text-xs"
-                      >
-                        {getTotalItems()}
-                      </Badge>
-                    )}
-                  </Button>
-                </CartSidebar>
               </div>
             </div>
           </div>

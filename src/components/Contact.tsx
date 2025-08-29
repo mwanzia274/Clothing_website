@@ -25,7 +25,7 @@ Message:
 ${formData.message}
     `;
     
-    window.open(`mailto:alexmwanzia234@gmail.com?subject=${encodeURIComponent(formData.subject || 'Inquiry from NECTOR')}&body=${encodeURIComponent(emailBody)}`, '_blank');
+    window.open(`mailto:alexmwanzia234@gmail.com?subject=${encodeURIComponent(formData.subject || 'Inquiry from NECTOR BOUTIQUE')}&body=${encodeURIComponent(emailBody)}`, '_blank');
   };
 
   return (
@@ -165,7 +165,7 @@ ${formData.message}
               <Button 
                 variant="boutique" 
                 className="w-full"
-                onClick={() => window.open('mailto:alexmwanzia234@gmail.com?subject=Inquiry from NECTOR&body=Hello, I would like to inquire about...', '_blank')}
+                onClick={() => window.open('mailto:alexmwanzia234@gmail.com?subject=Inquiry from NECTOR BOUTIQUE&body=Hello, I would like to inquire about...', '_blank')}
               >
                 Send Message
               </Button>

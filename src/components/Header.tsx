@@ -49,7 +49,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-rose-gold bg-clip-text text-transparent">
-              NECTOR
+              NECTOR BOUTIQUE
             </h1>
           </div>
 

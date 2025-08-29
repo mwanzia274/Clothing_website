@@ -33,7 +33,7 @@ const About = () => {
           {/* Content */}
           <div>
             <Badge variant="secondary" className="mb-4 bg-rose-gold/20 text-rose-gold-dark">
-              About NECTOR
+              About NECTOR BOUTIQUE
             </Badge>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -45,7 +45,7 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Founded with a vision to empower women through fashion, NECTOR 
+              Founded with a vision to empower women through fashion, NECTOR BOUTIQUE 
               has been a trusted destination for sophisticated style for over a decade.
               We believe that the right outfit can transform not just how you look, 
               but how you feel.
@@ -101,7 +101,7 @@ const About = () => {
                   What Our Customers Say
                 </h4>
                 <blockquote className="text-center italic text-muted-foreground">
-                  "NECTOR has completely transformed my wardrobe. 
+                  "NECTOR BOUTIQUE has completely transformed my wardrobe. 
                   The quality and style are unmatched!"
                 </blockquote>
                 <div className="text-center mt-3 text-sm font-medium text-warm-gray">

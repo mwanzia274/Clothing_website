@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-rose-gold to-rose-gold-light bg-clip-text text-transparent">
-              Bella Boutique
+              NECTOR
             </h3>
             <p className="text-background/80 mb-4 leading-relaxed max-w-md">
               Your destination for sophisticated women's fashion. We curate timeless 
@@ -78,7 +78,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-background/60 text-sm">
-            © 2024 Bella Boutique. All rights reserved. | Crafted with elegance and passion.
+            © 2024 NECTOR. All rights reserved. | Crafted with elegance and passion.
           </p>
         </div>
       </div>

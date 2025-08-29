@@ -30,7 +30,7 @@ const LocationMap = () => {
           <div className="flex items-center gap-2 text-sm">
             <MapPin className="w-4 h-4 text-primary" />
             <div>
-              <p className="font-semibold text-foreground">Bella Boutique</p>
+              <p className="font-semibold text-foreground">NECTOR</p>
               <p className="text-muted-foreground">Eastleigh, Nairobi</p>
             </div>
           </div>
